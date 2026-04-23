@@ -1,0 +1,56 @@
+/* Basic page setup */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #abcbea;
+  color: #222;
+}
+
+/* Center the app on the page */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Room Name (big and clear) */
+#room-name {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Room Description */
+#room-desc {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+#exits-area {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #eef2ff;
+  border-radius: 6px;
+}
+#exits-area button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+
+/* Message Area (visually separated) */
+#message-area {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 15px;
+  min-height: 60px;
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: 12px;
+  font-style: italic;
+  color: #555;
+}

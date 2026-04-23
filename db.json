@@ -1,0 +1,73 @@
+{
+  "rooms": {
+    "bedroom": {
+      "id": "bedroom",
+      "name": "Cozy bedroom",
+      "description": "Soft morning light filters through the curtains onto a neatly made bed.",
+      "exits": { "east": "hallway" },
+      "items": ["bed", "desk"]
+    },
+    "hallway": {
+      "id": "hallway",
+      "name": "Narrow Hallway",
+      "description": "Framed photos line the walls of a dimly lit hallway that creaks underfoot.",
+      "exits": { 
+        "west": "bedroom",
+        "north": "kitchen",
+        "south": "locked_gate" 
+      },
+      "items": ["key"] 
+    },
+    "kitchen": {
+      "id": "kitchen",
+      "name": "Small Kitchen",
+      "description": "The smell of fresh coffee lingers in the air beside a cluttered countertop.",
+      "exits": { "south": "hallway" },
+      "items": ["knife", "apple", "safe"] 
+    },
+    "locked_gate": { 
+      "id": "locked_gate",
+      "name": "Garden Gate",
+      "description": "A heavy iron gate leading to the garden. It requires a keycard.",
+      "exits": { "north": "hallway" },
+      "requiresItem": "keycard", 
+      "isLocked": true,          
+      "items": []
+    }
+  },
+  "items": {
+    "key": {
+      "name": "Old Key",
+      "description": "A rusty old key."
+    },
+    "keycard": { 
+      "name": "Keycard",
+      "description": "A plastic card with a magnetic strip."
+    },
+    "safe": { 
+      "name": "Steel Safe",
+      "description": "A small digital safe tucked under the counter. It's locked.",
+      "requiresItem": "key", 
+      "isLocked": true,    
+      "contents": ["secret_note"] 
+    },
+    "map": {
+      "name": "Map",
+      "description": "A faded treasure map."
+    },
+    "knife": { "name": "Knife", "description": "A sharp kitchen knife." },
+    "apple": { "name": "Apple", "description": "A red apple." },
+    "bed": { "name": "bed", "description": "A large and old bed." },
+    "desk": { 
+      "name": "desk", 
+      "description": "A beautiful yellow desk.",
+      "isLocked": true,
+      "requiresItem": null, 
+      "contents": ["keycard"] 
+    },
+    "secret_note": { 
+      "name": "Secret Note",
+      "description": "It says: 'The treasure is under the garden tree.'"
+    }
+  }
+}
